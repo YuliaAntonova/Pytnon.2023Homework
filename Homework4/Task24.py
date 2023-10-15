@@ -10,3 +10,15 @@
 Напишите программу для нахождения максимального числа ягод, которое может
 собрать за один заход собирающий модуль, находясь перед некоторым кустом
 заданной во входном файле грядки"""
+import random
+bush = int(input("Введите кол-во кустов: "))
+small_fruit = [random.randint(1, 10) for _ in range(bush)] # 1-что мы добавляем(рандомное число), 2- идя по генерации последовательности 10 раз
+print(small_fruit)
+ai_list=[] #новый пустой список
+for bush1 in range(bush): # выдать все значения из диапазона bush 
+    bush2 = (bush1 - 1) % bush
+    bush3 = (bush1 + 1) % bush
+    sum_bush = small_fruit[bush1] + small_fruit[bush2] + small_fruit[bush3]
+    ai_list.append(sum_bush)
+print(max(ai_list))
+
