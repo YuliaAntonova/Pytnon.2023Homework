@@ -3,6 +3,26 @@
 натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать. Для
 этого Петя делает две подсказки. Он называет сумму этих чисел S и их
 произведение P. Помогите Кате отгадать задуманные Петей числа."""
-sum = int (input('Введите сумму чисел: '))
-compos = int (input('Введите произведение чисел: '))
-
+sum_1 = int (input('Введите сумму чисел: '))
+multi = int (input('Введите произведение чисел: '))
+"""x = 1
+y = sum_1 - x
+while x <= sum_1//2 and x*y !=compos:
+    x+=1
+    y = sum_1 - x
+if x*y == compos:
+    print(f"Найдены числа {x} и {y}")
+else:
+    print("невозможно найти")"""
+    #или
+"""# x + y = sum_1, x = sum_1 - y
+for i in range(1001):
+    if (sum_1 - i) * i == multi:
+        result = i
+        break
+print(result, sum_1 - result)"""
+#или d = b2 - 4ac- формула дискриминанта
+d = sum_1 **2 - 4 * multi 
+print(d)
+result = (-sum_1 + d **(0.5))/(-2), (-sum_1 - d **(0.5))/(-2)
+print(result)
