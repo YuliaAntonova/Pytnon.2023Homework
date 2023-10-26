@@ -9,8 +9,7 @@ len_2 = int(input("Введите кол-во элементов второго 
 set_1 = [random.randint(0, 10) for i in range(len_1)] # 1-что мы добавляем(рандомное число), 2- идя по генерации последовательности 10 раз
 print(set_1)
 set_2 = [random.randint(0, 10) for i in range(len_2)] 
-set_1 = set(sorted(set_1))# отсортировать список
+set_1 = set(sorted(set_1))# отсортировать список,преобразовать список в множество
 print(set_1)
-set_2 = set(sorted(set_2))# преобразовать список в множество
-print(set_2)
+set_2 = set(sorted(set_2))
 print(set_1.intersection(set_2))# пересечение множеств
